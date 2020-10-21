@@ -5,11 +5,14 @@ Etapas de desenvolvimento:
 @ Menu login -> Pronto (essencial)
   #Integração -> Não desenvolvido
 @ Menu cadastro -> Parcialmente pronto (essencial)
-  #Segurança -> Em desenvolvimento (importante)
+  #Segurança -> Em desenvolvimento, quase pronto (importante)
   #Integração -> Não desenvolvido
+  #Cadastramento cartão de crédito -> Desenvolvido
 @ Menu admin -> Não desenvolvido (não essencial)
   #Integração -> Não desenvolvido
 @ Hub compras -> Não desenvolvido
   #Carrinhos de compras -> Não desenvolvido (não essencial)
   #Cadastramento de cartão de crédito -> Não desenvolvido (não essencial)
-
+To do:
+@ Resolver bug com o verificador de senhas
+@ Fazer teste de stress
