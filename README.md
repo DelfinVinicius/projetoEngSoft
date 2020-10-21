@@ -13,6 +13,3 @@ Etapas de desenvolvimento:
 @ Hub compras -> Não desenvolvido
   #Carrinhos de compras -> Não desenvolvido (não essencial)
   #Cadastramento de cartão de crédito -> Não desenvolvido (não essencial)
-To do:
-@ Resolver bug com o verificador de senhas
-@ Fazer teste de stress
