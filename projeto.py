@@ -1,4 +1,6 @@
-import os
+from os import system
+from sys import exit
+system('clear')
 # Lista com os DDDs do estado de São Paulo
 lista_DDDs = ['11', '12', '13', '14', '15', '16', '17', '18', '19']
 
@@ -14,20 +16,20 @@ print('Digite "login" para entrar ou "cadastrar" para criar uma conta:')
 opcao_entrada = str(input('Opção: '))
 
 # Limpa o terminal
-os.system('clear')
+system('clear')
 
 # Área de login ou cadastro
 while True:
     # Essa é a parte do login
     if opcao_entrada in 'LoginloginLOGIN':
-        print('-=' * 10, 'LOGIN', '=-' * 10)
+        print('-=' * 15, 'LOGIN', '=-' * 15)
         login_login_primario = str(input('Email: '))
         senha_login_primario = str(input('Senha: '))
         break
 
     # Aqui é a do cadastro
     elif opcao_entrada in 'CadastrocadastroCADASTRO':
-        print('-=' * 9, 'CADASTRO', '=-' * 9)
+        print('-=' * 14, 'CADASTRO', '=-' * 14)
         print('Preencha os campos a seguir com as informações requisitadas!')
         login_cadastro = str(input('Informe o seu email: '))
         senha_cadastro = str(input('Crie uma senha com oito dígitos: '))
@@ -38,18 +40,25 @@ while True:
             for contador_senha_cadastro in range(len(senha_cadastro)):
                 contador_senha_cadastro += 1
             if contador_senha_cadastro != 8:
-                print('Número de caracteres inválido! Tente novamente')
-                senha_cadastro = str(input('Digite novamente a senha: '))
+                print('O número de caracteres digitados é inválido!')
+                senha_cadastro = str(input('Digite a senha novamente: '))
             else:
                 break
 
-        senha_cadastro_confirmacao = str(input('Digite novamente a senha: '))
+        senha_cadastro_confirmacao = str(input('Confirme a sua senha: '))
 
         # Essa parte serve para caso o usuário digite senhas diferentes nos campos
-        while senha_cadastro != senha_cadastro_confirmacao:
-            print('As senhas não coincidem! Tente digite-las novamente.')
-            senha_cadastro = str(input('Senha: '))
-            senha_cadastro_confirmacao = str(input('Digite novamente a senha: '))
+        while True:
+            for contador_senha_cadastro in range(len(senha_cadastro_confirmacao)):
+                contador_senha_cadastro += 1
+            if contador_senha_cadastro != 8:
+                print('O número de caracteres digitados é inválido!')
+                senha_cadastro_confirmacao = str(input('Confirme a sua senha novamente: '))
+            elif senha_cadastro != senha_cadastro_confirmacao:
+                print('Ambas as senhas não coincidem!')
+                senha_cadastro_confirmacao = str(input('Confirme a sua senha novamente: '))
+            else:
+                break
 
         celular_cadastro = str(input('Digite o número do seu celuar: ')).replace(" ", "")
 
@@ -71,18 +80,18 @@ while True:
                 contador_DDD += 1
 
         # Limpa o terminal
-        os.system('clear')
+        system('clear')
 
         # Pergunta caso o usuário queira cadastrar o cartão de crédito agora ou não
         cadastrar_cartao_cadastro = str(input('Deseja cadastrar o seu cartão para facilitar futuras compras? [S/N] '))
         from time import sleep
-        if cadastrar_cartao_cadastro == 'S':
+        if cadastrar_cartao_cadastro in 'Ss':
 
             # Limpa o terminal
-            os.system('clear')
+            system('clear')
 
             # Esse código serve para cadastrar um cartão de crédito
-            print('-=' * 5, 'Cadastro Cartão', '-=' * 5)
+            print('-=' * 10, 'Cadastro Cartão', '-=' * 10)
             numero_cartao = str(input('Insira o número do cartão: ')).replace(" ", "")
 
             # Aqui se verifica se o cartão tem dezesseis dígitos como o esperado
@@ -125,13 +134,40 @@ while True:
                     break
 
         # Limpa o terminal
-        os.system('clear')
+        system('clear')
 
         print('Redirecionando para a tela inicial...')
         sleep(5)
 
+        # Limpa o terminal
+        system('clear')
         break
 
-    # Se o usuário na hora de escolher se logar ou se cadastrar digitar uma opção inválida, essa mensagem aqui aparece
-    print('Opção inválida! Tente novamente:')
-    opcao_entrada = input(str('Opção: '))
+    # Caso o usuário digite uma opção que não seja logar ou cadastrar
+    else:
+        print('Opção inválida! Tente novamente:')
+        opcao_entrada = input(str('Opção: '))
+
+# PROVISÓRIO Fecha o programa quando o usuário loga pela primeira vez
+if opcao_entrada in 'loginLoginLOGIN':
+    exit()
+
+# Aqui o usuário escolhe se quer se logar ou se cadastrar pela segunda vez
+print('Digite "login" para entrar ou "cadastrar" para criar uma conta:')
+opcao_entrada = str(input('Opção: '))
+
+while True:
+    if opcao_entrada in 'cadastroCadastroCADASTRO':
+        system('clear')
+        print('-=' * 14, 'CADASTRO', '=-' * 14)
+        print('Você já se cadastrou! Digite "login" para logar na plataforma.')
+        opcao_entrada = str(input('Opção: '))
+    elif opcao_entrada in 'loginLoginLOGIN':
+        system('clear')
+        print('-=' * 15, 'LOGIN', '=-' * 15)
+        login_login_secundario = str(input('Email: '))
+        senha_login_secundario = str(input('Senha: '))
+        break
+    else:
+        print('Opção inválida! Tente novamente')
+        opcao_entrada = str(input('Opção: '))
