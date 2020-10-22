@@ -5,7 +5,7 @@ Etapas de desenvolvimento:
 @ Menu login -> Pronto (essencial)
   #Integração -> Não desenvolvido
 @ Menu cadastro -> Parcialmente pronto (essencial)
-  #Segurança -> Em desenvolvimento, quase pronto (importante)
+  #Segurança -> Desenvolvido (importante)
   #Integração -> Não desenvolvido
   #Cadastramento cartão de crédito -> Desenvolvido
 @ Menu admin -> Não desenvolvido (não essencial)
