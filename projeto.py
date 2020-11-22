@@ -55,7 +55,7 @@ while True:
         senha_login_primario = str(input('Senha: '))
         system('clear')
         print('Você ainda não é cadastrado. Se cadastre precionando [2]')
-        sys.exit()
+        exit()
 
     # Aqui é a do cadastro
     elif opcao_entrada in '2[2]':
