@@ -1,7 +1,7 @@
 from os import system
 from sys import exit
 from random import randint
-system('clear')
+system('cls')
 
 # Essa função serve para criar o logo da empresa
 def logo_icaro():
@@ -44,7 +44,7 @@ print('Digite [1] para fazer login ou [2] para criar uma conta:')
 opcao_entrada = str(input('Opção: '))
 
 # Limpa o terminal
-system('clear')
+system('cls')
 
 # Área de login ou cadastro
 while True:
@@ -53,7 +53,7 @@ while True:
         print('-=' * 15, 'LOGIN', '=-' * 15)
         login_login_primario = str(input('Email: '))
         senha_login_primario = str(input('Senha: '))
-        system('clear')
+        system('cls')
         print('Você ainda não é cadastrado. Se cadastre precionando [2]')
         exit()
 
@@ -110,7 +110,7 @@ while True:
                 contador_DDD += 1
 
         # Limpa o terminal
-        system('clear')
+        system('cls')
 
         # Pergunta caso o usuário queira cadastrar o cartão de crédito agora ou não
         print('-=' * 14, 'CADASTRO CARTÃO', '=-' * 16)
@@ -126,7 +126,7 @@ while True:
         if cadastrar_cartao_cadastro in 'Ss':
 
             # Limpa o terminal
-            system('clear')
+            system('cls')
 
             # Esse código serve para cadastrar um cartão de crédito
             print('-=' * 14, 'CADASTRO CARTÃO', '=-' * 16)
@@ -172,13 +172,13 @@ while True:
                     break
 
         # Limpa o terminal
-        system('clear')
+        system('cls')
 
         print('Redirecionando para a tela inicial...')
         sleep(2)
 
         # Limpa o terminal
-        system('clear')
+        system('cls')
         break
 
     # Caso o usuário digite uma opção que não seja logar ou cadastrar
@@ -197,16 +197,16 @@ opcao_entrada = str(input('Opção: '))
 
 while True:
     if opcao_entrada in 'cadastroCadastroCADASTRO':
-        system('clear')
+        system('cls')
         print('-=' * 14, 'CADASTRO', '=-' * 14)
         print('Você já se cadastrou! Digite "login" para logar na plataforma.')
         opcao_entrada = str(input('Opção: '))
     elif opcao_entrada in 'loginLoginLOGIN':
-        system('clear')
+        system('cls')
         print('-=' * 15, 'LOGIN', '=-' * 15)
         login_login_secundario = str(input('Email: '))
         senha_login_secundario = str(input('Senha: '))
-        system('clear')
+        system('cls')
         print('BEM VINDO AO ÍCARO TRAVELS!!!')
         print('-=' * 33)
         print('Escolha os pacotes de viagens que desejar:')
@@ -218,7 +218,7 @@ while True:
                   'Pacote sertão nordestino [4]\n'
                   'Eurotrip [5]\n'
                     'Opção: ')))
-            system('clear')
+            system('cls')
             if pacotes_viagens != 1 or 2 or 3 or 4 or 5:
                 print('Opção inválida')
                 print('-=' * 33)
@@ -258,7 +258,7 @@ while True:
         print('Opção inválida! Tente novamente')
         opcao_entrada = str(input('Opção: '))
         break
-system('clear')
+system('cls')
 # Aqui é como ele pretende pagar
 print('Como deseja pagar?')
 forma_pagamento = int(input(' Boleto [1]\n Cartão de Crédito [2]\n Cartão Ícaro [3]\n Opção: '))
@@ -287,7 +287,7 @@ if forma_pagamento == 1:
     print()
     imprimir_boleto = int(input('Digite 1 para imprimir o boleto: '))
     if imprimir_boleto == 1:
-        #system('clear')
+        system('cls')
         print('Tá loco! Isso daqui não imprime nada não.')
         sleep(1)
 elif forma_pagamento == 2:
@@ -296,7 +296,7 @@ elif forma_pagamento == 2:
     print('Transação feita com sucesso!')
 elif forma_pagamento == 3:
     print('Compra feita com sucesso!')
-system('clear')
+system('cls')
 print('Obrigado por comprar com a Ícaros! Boa viagem e volte sempre!!!')
 print()
 import gzip
